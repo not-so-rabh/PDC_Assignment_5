@@ -1,0 +1,10 @@
+function F = solution(x)
+w=x(1);
+T=x(2);
+s=w*1j;
+Gpnum=2*(s+1)*exp(-2*s)
+Gpden = 10*(s^2)+(7*s)+1;
+Gp = Gpnum/Gpden
+Gc = 1.0833*(1+(1/(T*s)));
+L=Gp*Gc;
+F=[angle(L)+2.0944 ; abs(L)-1]
